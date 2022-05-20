@@ -3,6 +3,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\WatchController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,10 +17,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::group(['prefix'=>'admin'],function(){
+Route::group(['prefix'=>'/admin'],function(){
 
     Route::get('/',[AdminController::class,'home']);
     Route::resource('/categories',CategoryController::class);
-
+    Route::resource('/watches',WatchController::class);
 });
 

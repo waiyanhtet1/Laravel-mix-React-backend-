@@ -14,5 +14,6 @@
                 <input type="submit" value="ပြင်မည်" class="btn btn-warning mt-1">
             </div>
         </form>
+        <div class="mt-3">{{$category->updated_at->diffForHumans()}} ကနောက်ဆုံးပြင်ခဲ့သည်</div>
     </div>
 @endsection

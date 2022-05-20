@@ -13,13 +13,13 @@
             <div class="row">
                 <div class="col-md-3">
                     <ul class="list-group">
-                        <li class="list-group-item">Categories</li>
-                        <li class="list-group-item">Products</li>
+                        <li class="list-group-item"><a href="{{route('categories.index')}}" >Categories</a></li>
+                        <li class="list-group-item"><a href="{{route('watches.index')}}">Products</a></li>
                         <li class="list-group-item">Orders</li>
                     </ul>
                 </div>
                 <div class="col-md-9">
-                    <div class="card p-3">
+                    <div class="card p-3" style="width: 930px">
                         {{-- alert message --}}
                         @if (session()->has('success'))
                             <div class="alert alert-success">{{session()->get('success')}}</div>                            
