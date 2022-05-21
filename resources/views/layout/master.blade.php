@@ -16,6 +16,9 @@
                         <li class="list-group-item"><a href="{{route('categories.index')}}" >Categories</a></li>
                         <li class="list-group-item"><a href="{{route('watches.index')}}">Products</a></li>
                         <li class="list-group-item">Orders</li>
+                        <a href="{{url('/admin/logout')}}">
+                            <li class="list-group-item">Logout</li>
+                        </a>
                     </ul>
                 </div>
                 <div class="col-md-9">

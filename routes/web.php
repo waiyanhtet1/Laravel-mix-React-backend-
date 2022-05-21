@@ -2,6 +2,7 @@
 
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\WatchController;
 use Illuminate\Support\Facades\Route;
@@ -17,7 +18,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::group(['prefix'=>'/admin'],function(){
+Route::get('/admin/login',[AuthController::class,'login']);
+Route::post('/admin/login',[AuthController::class,'login_post']);
+Route::get('/admin/logout',[AuthController::class,'logout']);
+
+Route::group(['prefix'=>'/admin', 'middleware'=>['authUser']],function(){
 
     Route::get('/',[AdminController::class,'home']);
     Route::resource('/categories',CategoryController::class);
